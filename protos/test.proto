@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+message TestMessage {
+	string test = 1;
+}
+
+service TestService {
+	
+	rpc TestUnary(TestMessage) returns (TestMessage) {}
+}
