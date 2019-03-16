@@ -17,7 +17,15 @@
 [GoDoc]: https://godoc.org/github.com/philip-bui/grpc-zerolog
 [GoDoc Widget]: https://godoc.org/github.com/philip-bui/grpc-zerolog?status.svg
 
-```
+Implementation of gRPC Logging Middleware, integrating [Zerolog](https://github.com/rs/zerolog) as a gRPC [Interceptor](https://github.com/grpc-ecosystem/go-grpc-middleware) to log the following fields:
+
+- Request Protobufs as JSON.
+- Response Protobufs as JSON, or Errors.
+- Status Code, Duration, Timestamp, Service Name, Service Method, IP, Metadata Fields and User Agent.
+
+## Usage
+
+```go
 import (
 	"github.com/philip-bui/grpc-zerolog"
 )
@@ -29,4 +37,6 @@ func main() {
 }
 ```
 
+## License
 
+gRPC Zerolog is available under the MIT license. [See LICENSE](https://github.com/philip-bui/grpc-zerolog/blob/master/LICENSE) for details.
