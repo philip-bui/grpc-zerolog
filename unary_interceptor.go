@@ -4,12 +4,18 @@ import (
 	"context"
 	"time"
 
+	"github.com/rs/zerolog"
+	"github.com/rs/zerolog/log"
 	"google.golang.org/grpc"
 )
 
 // UnaryInterceptor is a gRPC Server Option that uses NewUnaryServerInterceptor() to log gRPC Requests.
 func UnaryInterceptor() grpc.ServerOption {
 	return grpc.UnaryInterceptor(NewUnaryServerInterceptor())
+}
+
+func UnaryInterceptorWithLogger(log *zerolog.Logger) grpc.ServerOption {
+	return grpc.UnaryInterceptor(NewUnaryServerInterceptorWithLogger(log))
 }
 
 // NewUnaryServerInterceptor that logs gRPC Requests using Zerolog.
@@ -35,6 +41,10 @@ func UnaryInterceptor() grpc.ServerOption {
 //		ZerologMessageField: "UnaryMessageDefault",
 //	}
 func NewUnaryServerInterceptor() grpc.UnaryServerInterceptor {
+	return NewUnaryServerInterceptorWithLogger(&log.Logger)
+}
+
+func NewUnaryServerInterceptorWithLogger(log *zerolog.Logger) grpc.UnaryServerInterceptor {
 	return func(ctx context.Context, req interface{}, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (interface{}, error) {
 		now := time.Now()
 		resp, err := handler(ctx, req)

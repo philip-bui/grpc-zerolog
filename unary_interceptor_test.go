@@ -13,6 +13,7 @@ import (
 type TestUnaryInterceptorSuite struct {
 	suite.Suite
 	out    *bytes.Buffer
+	log    zerolog.Logger
 	client *test.TestClient
 }
 
@@ -21,15 +22,17 @@ func TestUnaryServerInterceptor(t *testing.T) {
 }
 
 func (s *TestUnaryInterceptorSuite) SetupSuite() {
+	s.out = &bytes.Buffer{}
+	s.log = zerolog.New(s.out)
 	go func() {
-		test.StartServer(NewUnaryServerInterceptor())
+		test.StartServer(NewUnaryServerInterceptorWithLogger(&s.log))
 	}()
 	s.client = test.GetClient()
 }
 
 func (s *TestUnaryInterceptorSuite) SetupTest() {
 	s.out = &bytes.Buffer{}
-	log = zerolog.New(s.out)
+	s.log = zerolog.New(s.out)
 }
 
 func TestUnaryInterceptor(t *testing.T) {
