@@ -2,12 +2,15 @@
 
 
 [[projects]]
+  digest = "1:a2c1d0e43bd3baaa071d1b9ed72c27d78169b2b269f71c105ac4ba34b1be4a39"
   name = "github.com/davecgh/go-spew"
   packages = ["spew"]
+  pruneopts = "UT"
   revision = "346938d642f2ec3594ed81d874461961cd0faa76"
   version = "v1.1.0"
 
 [[projects]]
+  digest = "1:4ba8096f8ea6ea9f7aefb98e189e0128324883f0b4e839800ce4b37c90230c5c"
   name = "github.com/golang/protobuf"
   packages = [
     "jsonpb",
@@ -16,47 +19,57 @@
     "ptypes/any",
     "ptypes/duration",
     "ptypes/struct",
-    "ptypes/timestamp"
+    "ptypes/timestamp",
   ]
-  revision = "b4deda0973fb4c70b50d226b1af49f3da59f5265"
-  version = "v1.1.0"
+  pruneopts = "UT"
+  revision = "d04d7b157bb510b1e0c10132224b616ac0e26b17"
+  version = "v1.4.2"
 
 [[projects]]
+  digest = "1:0028cb19b2e4c3112225cd871870f2d9cf49b9b4276531f03438a88e94be86fe"
   name = "github.com/pmezard/go-difflib"
   packages = ["difflib"]
+  pruneopts = "UT"
   revision = "792786c7400a136282c1664665ae0a8db921c6c2"
   version = "v1.0.0"
 
 [[projects]]
+  digest = "1:d823cf8863c515f10fe9084d9688e8cf01084fd83dd11bcb67e13162c30b3a4a"
   name = "github.com/rs/zerolog"
   packages = [
     ".",
     "internal/cbor",
     "internal/json",
-    "log"
+    "log",
   ]
+  pruneopts = "UT"
   revision = "77db4b4f350e31be66a57c332acb7721cf9ff9bb"
   version = "v1.8.0"
 
 [[projects]]
+  digest = "1:ac83cf90d08b63ad5f7e020ef480d319ae890c208f8524622a2f3136e2686b02"
   name = "github.com/stretchr/objx"
   packages = ["."]
+  pruneopts = "UT"
   revision = "477a77ecc69700c7cdeb1fa9e129548e1c1c393c"
   version = "v0.1.1"
 
 [[projects]]
+  digest = "1:ffae6a0390594c05dc5ba534c385229e883508f17f6da257624913fd9aaa4d21"
   name = "github.com/stretchr/testify"
   packages = [
     "assert",
     "mock",
     "require",
-    "suite"
+    "suite",
   ]
+  pruneopts = "UT"
   revision = "f35b8ab0b5a2cef36673838d662e249dd9c94686"
   version = "v1.2.2"
 
 [[projects]]
   branch = "master"
+  digest = "1:dc1b5a4f3a84b5c8503036630dd0f245de44d9c22414ddff0e5e473849139fd3"
   name = "golang.org/x/net"
   packages = [
     "context",
@@ -65,11 +78,13 @@
     "http2/hpack",
     "idna",
     "internal/timeseries",
-    "trace"
+    "trace",
   ]
+  pruneopts = "UT"
   revision = "ed29d75add3d7c4bf7ca65aac0c6df3d1420216f"
 
 [[projects]]
+  digest = "1:a2ab62866c75542dd18d2b069fec854577a20211d7c0ea6ae746072a1dccdd18"
   name = "golang.org/x/text"
   packages = [
     "collate",
@@ -85,18 +100,22 @@
     "unicode/bidi",
     "unicode/cldr",
     "unicode/norm",
-    "unicode/rangetable"
+    "unicode/rangetable",
   ]
+  pruneopts = "UT"
   revision = "f21a4dfb5e38f5895301dc265a8def02365cc3d0"
   version = "v0.3.0"
 
 [[projects]]
   branch = "master"
+  digest = "1:601e63e7d4577f907118bec825902505291918859d223bce015539e79f1160e3"
   name = "google.golang.org/genproto"
   packages = ["googleapis/rpc/status"]
+  pruneopts = "UT"
   revision = "ff3583edef7de132f219f0efc00e097cabcc0ec0"
 
 [[projects]]
+  digest = "1:2dab32a43451e320e49608ff4542fdfc653c95dcc35d0065ec9c6c3dd540ed74"
   name = "google.golang.org/grpc"
   packages = [
     ".",
@@ -123,14 +142,110 @@
     "stats",
     "status",
     "tap",
-    "transport"
+    "transport",
   ]
+  pruneopts = "UT"
   revision = "168a6198bcb0ef175f7dacec0b8691fc141dc9b8"
   version = "v1.13.0"
+
+[[projects]]
+  digest = "1:6a351cb031761dcd668e5aca9a10bd6d1675aa5427ac1483a61c3a49b2d64962"
+  name = "google.golang.org/protobuf"
+  packages = [
+    "encoding/protojson",
+    "encoding/prototext",
+    "encoding/protowire",
+    "internal/descfmt",
+    "internal/descopts",
+    "internal/detrand",
+    "internal/encoding/defval",
+    "internal/encoding/json",
+    "internal/encoding/messageset",
+    "internal/encoding/tag",
+    "internal/encoding/text",
+    "internal/errors",
+    "internal/fieldsort",
+    "internal/filedesc",
+    "internal/filetype",
+    "internal/flags",
+    "internal/genid",
+    "internal/impl",
+    "internal/mapsort",
+    "internal/pragma",
+    "internal/set",
+    "internal/strs",
+    "internal/version",
+    "proto",
+    "reflect/protoreflect",
+    "reflect/protoregistry",
+    "runtime/protoiface",
+    "runtime/protoimpl",
+    "types/known/anypb",
+    "types/known/durationpb",
+    "types/known/structpb",
+    "types/known/timestamppb",
+  ]
+  pruneopts = "UT"
+  revision = "3f7a61f89bb6813f89d981d1870ed68da0b3c3f1"
+  version = "v1.25.0"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "697c2f2e548541931f34f820ba1508354c5f5d938adbcdc9ea8d5f287c4bd420"
+  input-imports = [
+    "github.com/davecgh/go-spew/spew",
+    "github.com/golang/protobuf/jsonpb",
+    "github.com/golang/protobuf/proto",
+    "github.com/golang/protobuf/ptypes",
+    "github.com/golang/protobuf/ptypes/any",
+    "github.com/golang/protobuf/ptypes/duration",
+    "github.com/golang/protobuf/ptypes/struct",
+    "github.com/golang/protobuf/ptypes/timestamp",
+    "github.com/pmezard/go-difflib/difflib",
+    "github.com/rs/zerolog",
+    "github.com/rs/zerolog/log",
+    "github.com/stretchr/objx",
+    "github.com/stretchr/testify/assert",
+    "github.com/stretchr/testify/mock",
+    "github.com/stretchr/testify/require",
+    "github.com/stretchr/testify/suite",
+    "golang.org/x/net/context",
+    "golang.org/x/net/http/httpguts",
+    "golang.org/x/net/http2",
+    "golang.org/x/net/http2/hpack",
+    "golang.org/x/net/idna",
+    "golang.org/x/net/trace",
+    "golang.org/x/text/collate",
+    "golang.org/x/text/collate/build",
+    "golang.org/x/text/language",
+    "golang.org/x/text/secure/bidirule",
+    "golang.org/x/text/transform",
+    "golang.org/x/text/unicode/bidi",
+    "golang.org/x/text/unicode/cldr",
+    "golang.org/x/text/unicode/norm",
+    "golang.org/x/text/unicode/rangetable",
+    "google.golang.org/genproto/googleapis/rpc/status",
+    "google.golang.org/grpc",
+    "google.golang.org/grpc/balancer",
+    "google.golang.org/grpc/balancer/base",
+    "google.golang.org/grpc/balancer/roundrobin",
+    "google.golang.org/grpc/codes",
+    "google.golang.org/grpc/connectivity",
+    "google.golang.org/grpc/credentials",
+    "google.golang.org/grpc/encoding",
+    "google.golang.org/grpc/encoding/proto",
+    "google.golang.org/grpc/grpclog",
+    "google.golang.org/grpc/keepalive",
+    "google.golang.org/grpc/metadata",
+    "google.golang.org/grpc/naming",
+    "google.golang.org/grpc/peer",
+    "google.golang.org/grpc/resolver",
+    "google.golang.org/grpc/resolver/dns",
+    "google.golang.org/grpc/resolver/passthrough",
+    "google.golang.org/grpc/stats",
+    "google.golang.org/grpc/status",
+    "google.golang.org/grpc/tap",
+    "google.golang.org/grpc/transport",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1
