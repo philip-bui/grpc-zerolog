@@ -62,7 +62,6 @@ var (
 	DetailsField = "details"
 	// UnaryMessageDefault of logging messages from unary.
 	UnaryMessageDefault = "unary"
-	log                 = zerolog.Logger{}
 )
 
 // LogIncomingCall of gRPC method.

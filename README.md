@@ -31,8 +31,15 @@ import (
 )
 
 func main() {
+	// With global Zerolog logger.
 	grpc.NewServer(
 		zerolog.UnaryInterceptor(),
+	)
+
+	// With custom Zerolog instance.
+	log := zerolog.New(os.Stdout)
+	grpc.NewServer(
+		zerolog.UnaryInterceptorWithLogger(&log),
 	)
 }
 ```
