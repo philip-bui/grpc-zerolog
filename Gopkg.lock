@@ -34,7 +34,7 @@
   version = "v1.0.0"
 
 [[projects]]
-  digest = "1:d823cf8863c515f10fe9084d9688e8cf01084fd83dd11bcb67e13162c30b3a4a"
+  digest = "1:342baf1b227dbc8829a60dc06cd7a5e70d3de350b501e2184ec8f19fe4418d4a"
   name = "github.com/rs/zerolog"
   packages = [
     ".",
@@ -43,8 +43,8 @@
     "log",
   ]
   pruneopts = "UT"
-  revision = "77db4b4f350e31be66a57c332acb7721cf9ff9bb"
-  version = "v1.8.0"
+  revision = "7825d863376faee2723fc99c061c538bd80812c8"
+  version = "v1.19.0"
 
 [[projects]]
   digest = "1:ac83cf90d08b63ad5f7e020ef480d319ae890c208f8524622a2f3136e2686b02"
